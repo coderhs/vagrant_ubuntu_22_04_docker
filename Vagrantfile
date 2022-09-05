@@ -30,7 +30,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: <<-SHELL
     apt-get update
     curl -sSL https://get.docker.com/ | sh
-    sudo usermod -aG docker `whoami`
-    sudo init 6
+    usermod -aG docker `whoami`
+    init 6
   SHELL
 end
